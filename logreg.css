@@ -1,0 +1,173 @@
+body {
+    padding-top: 90px;
+    background-color: #212529;
+}
+
+.panel-login {
+    border-color: rgb(27, 27, 27);
+    background-color: #212529;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.panel-login>.panel-heading {
+    color: #00415d;
+    background-color: #212529;
+    border-color: rgb(36, 36, 36);
+    text-align: center;
+}
+
+.panel-login>.panel-heading a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.panel-login>.panel-heading a.active {
+    color: #ff6a8f;
+    font-size: 18px;
+}
+
+.panel-login>.panel-heading hr {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    clear: both;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+
+.panel-login input[type="text"],
+.panel-login input[type="email"],
+.panel-login input[type="password"],
+.panel-login input[type="tel"] {
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    background-color: #2b2b31;
+    color: #ffffff;
+}
+
+.panel-login input:hover,
+.panel-login input:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-login {
+    background-image: linear-gradient( 90deg, #ff55a5 0%, #ff5860 100%);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #9ddbff;
+    outline: none;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background-color: #58ffff;
+    border-color: #fffc65;
+    outline: none;
+}
+
+.forgot-password {
+    text-decoration: underline;
+    color: #888;
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+    text-decoration: underline;
+    color: #666;
+}
+
+.btn-register {
+    background-image: linear-gradient( 90deg, #13c4a6 0%, #73dd0f 100%);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #1CB94A;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    color: #fff;
+    background-color: #1CA347;
+    border-color: #1CA347;
+}
+
+.herostylecsbro {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #00a6ff;
+    background-image: linear-gradient( 90deg, #ff55a5 0%, #ff5860 100%);
+    -webkit-box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    opacity: 0.85;
+}
+
+.paymentarea {
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    background-color: #2b2b31;
+    color: #ffffff;
+}
+
+.copynum {
+    outline: none;
+    background-image: linear-gradient( 90deg, #ff55a5 0%, #ff5860 100%);
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border-color: #ff5860;
+}
+
+.inputa2 {
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    background-color: #2b2b31;
+    color: #ffffff;
+}
+
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: #fff;
+    margin-bottom: 10px;
+    display: none;
+    margin-top: 15px;
+}
