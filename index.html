@@ -2,6 +2,34 @@
 <html lang="en">
 
 <head>
+
+    <script src="cookie.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="firebase.js"></script>
+
+    <!-- check usercookie and take action -->
+    <script type="text/javascript" language="JavaScript">
+        if (document.cookie.indexOf("userLogin") < 0) {
+            alert("Cookie not found, redirecting you.");
+            window.location = "login.html";
+        }
+        let checkUserLogin = getCookie('userLogin');
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                //User loged
+                if (checkUserLogin == 'FALSE') {
+                    firebase.auth().signOut();
+                    window.location = "login.html";
+                }
+
+            } else {
+                if (checkUserLogin == 'FALSE') {
+                    window.location = "login.html";
+                }
+            }
+        });
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +40,9 @@
     <script src="https://use.fontawesome.com/df358c0385.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="cookie.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="firebase.js"></script>
-    <script>
-        let checkUserLogin = getCookie('userLogin');
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                //User loged
-                if (checkUserLogin == 'FALSE') {
-                    firebase.auth().signOut();
-                    window.location = "login.html";
-                }
-            } else {
-                if (checkUserLogin == 'FALSE') {
-                    window.location = "login.html";
-                }
-            }
-        });
-    </script>
+
+
+
 </head>
 
 <body>
@@ -42,12 +54,18 @@
                     <!--<img src="" alt="">-->
                     <h1 class="menubar__logo--text">CS-BRO</h1>
                 </div>
-                <li><a class="menubar__ul--link active" href="#home"><i class='fa fa-home' style="padding-right: 5px;"></i> Home</a></li>
-                <li><a class="menubar__ul--link" href="#home"><i class='fa fa-angellist' style="padding-right: 5px;"></i> Our Victory</a></li>
-                <li><a class="menubar__ul--link" href="#news"><i class='fa fa-anchor' style="padding-right: 5px;"></i>Notice bord</a></li>
-                <li><a class="menubar__ul--link" href="#contact"><i class='fa fa-area-chart' style="padding-right: 5px;"></i>Contact</a></li>
-                <li><a class="menubar__ul--link" href="#about"><i class='fa fa-book' style="padding-right: 5px;"></i>E-books</a></li>
-                <li><a class="menubar__ul--link" href="#" onclick="logout()"><i class='fa fa-sign-out' style="padding-right: 5px;"></i>Logout</a></li>
+                <li><a class="menubar__ul--link active" href="#home"><i class='fa fa-home'
+                            style="padding-right: 5px;"></i> Home</a></li>
+                <li><a class="menubar__ul--link" href="#home"><i class='fa fa-angellist'
+                            style="padding-right: 5px;"></i> Our Victory</a></li>
+                <li><a class="menubar__ul--link" href="#news"><i class='fa fa-anchor'
+                            style="padding-right: 5px;"></i>Notice bord</a></li>
+                <li><a class="menubar__ul--link" href="#contact"><i class='fa fa-area-chart'
+                            style="padding-right: 5px;"></i>Contact</a></li>
+                <li><a class="menubar__ul--link" href="#about"><i class='fa fa-book'
+                            style="padding-right: 5px;"></i>E-books</a></li>
+                <li><a class="menubar__ul--link" href="#" onclick="logout()"><i class='fa fa-sign-out'
+                            style="padding-right: 5px;"></i>Logout</a></li>
             </ul>
             <!--End Navigation bar-->
         </div>
