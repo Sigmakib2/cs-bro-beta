@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +12,27 @@
     <script src="https://use.fontawesome.com/df358c0385.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="js/cookie.js"></script>
+    <script src="cookie.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="js/firebase.js"></script>
+    <script src="firebase.js"></script>
     <script>
-        let checkUserLogin =  getCookie('userLogin');
+        let checkUserLogin = getCookie('userLogin');
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
                 //User loged
-                if(checkUserLogin == 'FALSE'){
+                if (checkUserLogin == 'FALSE') {
                     firebase.auth().signOut();
                     window.location = "login.html";
                 }
-            }else{
-                if(checkUserLogin == 'FALSE'){
+            } else {
+                if (checkUserLogin == 'FALSE') {
                     window.location = "login.html";
                 }
             }
         });
-        
     </script>
 </head>
+
 <body>
     <div class="container">
         <div class="menubar">
@@ -55,11 +56,12 @@
         </div>
     </div>
 </body>
-    <script>
-        function logout(){
-            setCookie('userLogin', 'FALSE');
-            firebase.auth().signOut();
-            window.location = "login.html";
-        }  
-    </script>
+<script>
+    function logout() {
+        setCookie('userLogin', 'FALSE');
+        firebase.auth().signOut();
+        window.location = "login.html";
+    }
+</script>
+
 </html>
